@@ -18,16 +18,16 @@ const Header = () => {
   ]
 
   return (
-    <header className="fixed top-0 left-0 right-0 bg-white/95 backdrop-blur-sm shadow-sm z-50 w-full max-w-full overflow-hidden">
+    <header className="fixed top-0 left-0 right-0 bg-white/95 backdrop-blur-sm shadow-sm z-fixed w-full max-w-full overflow-hidden">
       <div className="container mx-auto px-4 py-4 w-full max-w-full">
         <div className="flex items-center justify-between w-full">
           {/* Logo */}
           <div className="flex items-center space-x-2 flex-shrink-0">
-            <div className="w-10 h-10 bg-blue-600 rounded-lg flex items-center justify-center">
+            <div className="w-10 h-10 bg-primary-600 rounded-lg flex items-center justify-center">
               <span className="text-white font-bold text-xl">M</span>
             </div>
-            <span className="text-xl font-bold text-gray-800 hidden sm:block">Medal Techie</span>
-            <span className="text-lg font-bold text-gray-800 sm:hidden">MT</span>
+            <span className="text-xl font-bold text-secondary-800 hidden sm:block">Medal Techie</span>
+            <span className="text-lg font-bold text-secondary-800 sm:hidden">MT</span>
           </div>
 
           {/* Desktop Navigation */}
@@ -36,7 +36,7 @@ const Header = () => {
               <a
                 key={item.name}
                 href={item.href}
-                className="text-gray-600 hover:text-blue-600 transition-colors duration-200 font-medium text-sm xl:text-base whitespace-nowrap"
+                className="text-secondary-600 hover:text-primary-600 transition-colors duration-base font-medium text-sm xl:text-base whitespace-nowrap"
               >
                 {item.name}
               </a>
@@ -49,22 +49,22 @@ const Header = () => {
             onClick={() => setIsMenuOpen(!isMenuOpen)}
           >
             {isMenuOpen ? (
-              <X className="w-6 h-6 text-gray-600" />
+              <X className="w-6 h-6 text-secondary-600" />
             ) : (
-              <Menu className="w-6 h-6 text-gray-600" />
+              <Menu className="w-6 h-6 text-secondary-600" />
             )}
           </button>
         </div>
 
         {/* Mobile Navigation */}
         {isMenuOpen && (
-          <div className="lg:hidden mt-4 pb-4 border-t border-gray-200 w-full">
+          <div className="lg:hidden mt-4 pb-4 border-t border-secondary-200 w-full">
             <nav className="flex flex-col space-y-3 pt-4 w-full">
               {navItems.map((item) => (
                 <a
                   key={item.name}
                   href={item.href}
-                  className="text-gray-600 hover:text-blue-600 transition-colors duration-200 font-medium py-2 w-full"
+                  className="text-secondary-600 hover:text-primary-600 transition-colors duration-base font-medium py-2 w-full"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   {item.name}
