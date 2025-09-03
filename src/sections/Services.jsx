@@ -1,5 +1,6 @@
 import React from 'react'
 import { Globe, Smartphone, Database, Code, Palette, TrendingUp } from 'lucide-react'
+import ServicesCard from '../components/ServicesCard'
 
 const Services = () => {
   const services = [
@@ -45,51 +46,18 @@ const Services = () => {
     <section id="services" className="py-16 sm:py-20 bg-secondary-50 w-full max-w-full overflow-hidden">
       <div className="container mx-auto px-4 w-full max-w-full">
         {/* Section Header */}
-        <div className="text-center mb-12 sm:mb-16">
-          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-secondary-900 mb-4">
-            Our Services
-          </h2>
-          <p className="text-base sm:text-lg text-secondary-600 max-w-2xl mx-auto px-4">
-            What we do defines and projects our level of speciality.
-          </p>
+        <div className="text-center md:text-right mb-12 sm:mb-16">
+          <div className="mb-6">
+            <span className="inline-block bg-secondary-400 text-primary-800 px-3 py-2 rounded-full text-xs sm:text-sm font-medium mb-4">
+              Services
+            </span>
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-secondary-900 mb-6">
+            What we do defines <br/> and projects our level of speciality
+            </h2>
+          </div>
         </div>
-
-        {/* Services Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 w-full">
-          {services.map((service, index) => (
-            <div key={index} className="bg-white rounded-xl p-4 sm:p-6 shadow-sm hover:shadow-lg transition-shadow duration-base border border-secondary-100 w-full">
-              {/* Service Icon */}
-              <div className="mb-4">
-                {service.icon}
-              </div>
-
-              {/* Service Title */}
-              <h3 className="text-base sm:text-lg font-bold text-secondary-900 mb-3">
-                {service.title}
-              </h3>
-
-              {/* Service Description */}
-              <p className="text-sm sm:text-base text-secondary-600 mb-4 leading-relaxed">
-                {service.description}
-              </p>
-
-              {/* Service Features */}
-              <ul className="space-y-2">
-                {service.features.map((feature, featureIndex) => (
-                  <li key={featureIndex} className="flex items-center text-xs sm:text-sm text-secondary-600">
-                    <div className="w-1.5 h-1.5 sm:w-2 sm:h-2 bg-primary-600 rounded-full mr-2 sm:mr-3 flex-shrink-0"></div>
-                    <span className="min-w-0">{feature}</span>
-                  </li>
-                ))}
-              </ul>
-
-              {/* Learn More Button */}
-              <button className="mt-4 sm:mt-6 w-full bg-primary-600 hover:bg-primary-700 text-white py-2 px-4 rounded-lg font-medium transition-colors duration-base text-sm sm:text-base">
-                Learn More
-              </button>
-            </div>
-          ))}
-        </div>
+  
+  <ServicesCard items={services} />
 
         {/* CTA Section */}
         <div className="text-center mt-12 sm:mt-16">
@@ -106,6 +74,9 @@ const Services = () => {
           </div>
         </div>
       </div>
+
+
+      
     </section>
   )
 }

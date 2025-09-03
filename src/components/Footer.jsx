@@ -1,5 +1,6 @@
 import React from 'react'
 import { Mail, Phone, MapPin } from 'lucide-react'
+import medalTechieLogo from '../assets/images/medallogo.png'
 
 const Footer = () => {
   const currentYear = new Date().getFullYear()
@@ -11,10 +12,12 @@ const Footer = () => {
           {/* Company Info */}
           <div className="md:col-span-2 w-full">
             <div className="flex items-center space-x-2 mb-4">
-              <div className="w-8 h-8 sm:w-10 sm:h-10 bg-primary-600 rounded-lg flex items-center justify-center flex-shrink-0">
-                <span className="text-white font-bold text-lg sm:text-xl">M</span>
-              </div>
-              <span className="text-lg sm:text-xl font-bold">Medal Techie</span>
+              <img 
+                src={medalTechieLogo} 
+                alt="Medal Techie Logo" 
+                className="w-28 h-28 sm:w-32 sm:h-32 md:w-32 md:h-32 lg:w-32 lg:h-32 xl:w-36 xl:h-36 object-contain" 
+              />
+              {/* <span className="text-lg sm:text-xl font-bold">Medal Techie</span> */}
             </div>
             <p className="text-secondary-300 mb-6 leading-relaxed text-sm sm:text-base">
               We are a Techie Team, we pride ourselves with our each unique skills and we ensure 

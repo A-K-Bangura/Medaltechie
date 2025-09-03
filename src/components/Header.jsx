@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { Menu, X } from 'lucide-react'
+import medalTechieLogo from '../assets/images/medallogo.png'
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -18,20 +19,20 @@ const Header = () => {
   ]
 
   return (
-    <header className="fixed top-0 left-0 right-0 bg-white/95 backdrop-blur-sm shadow-sm z-fixed w-full max-w-full overflow-hidden">
-      <div className="container mx-auto px-4 py-4 w-full max-w-full">
-        <div className="flex items-center justify-between w-full">
-          {/* Logo */}
-          <div className="flex items-center space-x-2 flex-shrink-0">
-            <div className="w-10 h-10 bg-primary-600 rounded-lg flex items-center justify-center">
-              <span className="text-white font-bold text-xl">M</span>
-            </div>
-            <span className="text-xl font-bold text-secondary-800 hidden sm:block">Medal Techie</span>
-            <span className="text-lg font-bold text-secondary-800 sm:hidden">MT</span>
-          </div>
+          <header className="fixed top-0 left-0 right-0 bg-white/95 backdrop-blur-sm shadow-sm z-[2000] w-full max-w-full overflow-hidden">
+        <div className="container mx-auto px-4 w-full max-w-full">
+                  <div className="flex items-center justify-between w-full h-16 sm:h-18 md:h-18 lg:h-18 xl:h-18">
+           {/* Logo */}
+           <div className="flex items-center justify-center flex-shrink-0 h-full">
+             <img 
+               src={medalTechieLogo} 
+               alt="Medal Techie Logo" 
+               className="w-28 h-28 sm:w-32 sm:h-32 md:w-32 md:h-32 lg:w-32 lg:h-32 xl:w-36 xl:h-36 object-contain" 
+             />
+           </div>
 
-          {/* Desktop Navigation */}
-          <nav className="hidden lg:flex items-center space-x-6 xl:space-x-8 flex-shrink-0">
+           {/* Desktop Navigation */}
+           <nav className="hidden lg:flex items-center justify-center space-x-6 xl:space-x-8 flex-shrink-0 h-full">
             {navItems.map((item) => (
               <a
                 key={item.name}
@@ -43,11 +44,11 @@ const Header = () => {
             ))}
           </nav>
 
-          {/* Mobile Menu Button */}
-          <button
-            className="lg:hidden p-2 flex-shrink-0"
-            onClick={() => setIsMenuOpen(!isMenuOpen)}
-          >
+                     {/* Mobile Menu Button */}
+           <button
+             className="lg:hidden p-2 flex-shrink-0 h-full flex items-center justify-center"
+             onClick={() => setIsMenuOpen(!isMenuOpen)}
+           >
             {isMenuOpen ? (
               <X className="w-6 h-6 text-secondary-600" />
             ) : (
