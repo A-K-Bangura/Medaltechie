@@ -1,4 +1,5 @@
 import React from 'react'
+import ContactForm from '../components/ContactForm'
 
 const Contact = () => {
   return (
@@ -12,12 +13,12 @@ const Contact = () => {
             Let's Get Started Now Send Us an Email
           </h2>
         </div>
-        <p className="text-lg text-secondary-600">
+        {/* <p className="text-lg text-secondary-600">
           Hey let me tell you a secret, send a mail and bring your idea to reality
-        </p>
-        <p className="text-secondary-500 mt-4">
-          Component coming soon...
-        </p>
+        </p> */}
+        <div className="mt-8">
+          <ContactForm />
+        </div>
       </div>
     </section>
   )

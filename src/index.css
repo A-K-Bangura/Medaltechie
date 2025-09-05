@@ -621,12 +621,26 @@ img, video, iframe {
 .preserve-3d {
   transform-style: preserve-3d;
 }
+.hover-hide {
+  visibility: hidden;
+}
 
 /* Card scaling on hover */
 .card-item:hover {
   transform: scale(1.2);
   z-index: 9999;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+  transition: 
+    transform 0.35s cubic-bezier(0.22, 1, 0.36, 1),
+    /* box-shadow 0.35s cubic-bezier(0.22, 1, 0.36, 1), */
+    z-index 0s;
+  /* margin-left: 0; */
+}
+.card-item:hover .hover-hide {
+  visibility: visible;
+}
+.card-item:hover .hover-preview {
+  display: none;
 }
 
 .card-item:active {
