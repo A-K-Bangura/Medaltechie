@@ -37,7 +37,7 @@ const Header = () => {
               <a
                 key={item.name}
                 href={item.href}
-                className="text-secondary-600 hover:text-primary-600 transition-colors duration-base font-medium text-sm xl:text-base whitespace-nowrap"
+                className="text-neutral-600 hover:text-primary-600 transition-colors duration-200 font-medium text-sm xl:text-base whitespace-nowrap"
               >
                 {item.name}
               </a>
@@ -50,22 +50,22 @@ const Header = () => {
              onClick={() => setIsMenuOpen(!isMenuOpen)}
            >
             {isMenuOpen ? (
-              <X className="w-6 h-6 text-secondary-600" />
+              <X className="w-6 h-6 text-neutral-600" />
             ) : (
-              <Menu className="w-6 h-6 text-secondary-600" />
+              <Menu className="w-6 h-6 text-neutral-600" />
             )}
           </button>
         </div>
 
         {/* Mobile Navigation */}
         {isMenuOpen && (
-          <div className="lg:hidden mt-4 pb-4 border-t border-secondary-200 w-full">
+          <div className="lg:hidden mt-4 pb-4 border-t border-neutral-200 w-full">
             <nav className="flex flex-col space-y-3 pt-4 w-full">
               {navItems.map((item) => (
                 <a
                   key={item.name}
                   href={item.href}
-                  className="text-secondary-600 hover:text-primary-600 transition-colors duration-base font-medium py-2 w-full"
+                  className="text-neutral-600 hover:text-primary-600 transition-colors duration-200 font-medium py-2 w-full"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   {item.name}

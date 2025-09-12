@@ -30,10 +30,10 @@ const Blog = () => {
     <section id="blog" className="py-16 sm:py-20 bg-secondary-50 w-full max-w-full overflow-hidden">
       <div className="container mx-auto px-4 w-full max-w-full text-center lg:text-left">
         <div className="mb-6">
-          <span className="inline-block bg-secondary-400 text-primary-800 px-3 py-2 rounded-full text-xs sm:text-sm font-medium mb-4">
+          <span className="inline-block bg-secondary-200 text-primary-800 px-3 py-2 rounded-full text-xs sm:text-sm font-medium mb-4">
             Blog
           </span>
-          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-secondary-900 mb-6">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-neutral-900 mb-6">
             Latest Valuable Insights
           </h2>
         </div>
@@ -42,15 +42,15 @@ const Blog = () => {
         <div className="hidden lg:grid grid-cols-3 gap-6">
           {posts.map((post, idx) => (
             <div key={idx} className="overflow-hidden">
-              <div className="w-full aspect-video bg-secondary-100">
+              <div className="w-full aspect-video bg-neutral-100">
                 <img src={post.image} alt={post.title} className="w-full h-full object-cover" />
               </div>
               <div className="p-4 sm:p-6">
-                <div className="text-xs sm:text-sm text-secondary-600 mb-2">{post.date}</div>
-                <h3 className="text-lg sm:text-xl font-semibold text-secondary-900 mb-2">
+                <div className="text-xs sm:text-sm text-neutral-600 mb-2">{post.date}</div>
+                <h3 className="text-lg sm:text-xl font-semibold text-neutral-900 mb-2">
                   {post.title}
                 </h3>
-                <div className="text-sm text-secondary-700 mb-4">{post.author}</div>
+                <div className="text-sm text-neutral-700 mb-4">{post.author}</div>
                 <div className="flex justify-between items-center">
                   <a href={post.href} className="text-primary-600 font-semibold">Read More</a>
                   <ShineButton text="Open" variant="secondary" />
@@ -65,15 +65,15 @@ const Blog = () => {
           <div className="flex gap-4 snap-x snap-mandatory">
             {posts.map((post, idx) => (
               <div key={idx} className="overflow-hidden min-w-[85%] sm:min-w-[320px] snap-start">
-                <div className="w-full aspect-video bg-secondary-100">
+                <div className="w-full aspect-video bg-neutral-100">
                   <img src={post.image} alt={post.title} className="w-full h-full object-cover" />
                 </div>
                 <div className="p-4 sm:p-6">
-                  <div className="text-xs sm:text-sm text-secondary-600 mb-2">{post.date}</div>
-                  <h3 className="text-base sm:text-lg font-semibold text-secondary-900 mb-2">
+                  <div className="text-xs sm:text-sm text-neutral-600 mb-2">{post.date}</div>
+                  <h3 className="text-base sm:text-lg font-semibold text-neutral-900 mb-2">
                     {post.title}
                   </h3>
-                  <div className="text-sm text-secondary-700 mb-4">{post.author}</div>
+                  <div className="text-sm text-neutral-700 mb-4">{post.author}</div>
                   <div className="flex justify-between items-center">
                     <a href={post.href} className="text-primary-600 font-semibold">Read More</a>
                     <ShineButton text="Open" variant="secondary" />

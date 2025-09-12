@@ -30,14 +30,14 @@ const Hero = () => {
           </div>
 
           {/* Main Heading */}
-          <h1 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold text-secondary-900 mb-4 sm:mb-6 leading-tight px-2">
+          <h1 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold text-white mb-4 sm:mb-6 leading-tight px-2">
             {/* Quality & Strategic Creation of{' '}
             <span className="text-primary-600">Online and Digital Presence</span> */}
             <ShimmerText text="Quality & Strategic Creation of Online and Digital Presence" primaryColor="primary-600" shimmerColor="primary-100" classList="text-xl hidden lg:inline-block sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold mb-4 sm:mb-6 leading-tight px-2" />
           </h1>
 
           {/* Description */}
-          <p className="text-sm sm:text-base pt-12 lg:pt-0 lg:text-[#cfc9c8] lg:text-lg text-white mb-6 sm:mb-8 max-w-3xl mx-auto leading-relaxed px-4">
+          <p className="text-sm sm:text-base pt-12 lg:pt-0 text-white/90 lg:text-lg mb-6 sm:mb-8 max-w-3xl mx-auto leading-relaxed px-4">
             We are a team of specialized and diverse skills, let's help you brainstorm 
             and build up that technological idea to reality.
           </p>

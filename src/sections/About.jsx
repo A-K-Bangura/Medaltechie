@@ -41,15 +41,15 @@ const About = () => {
           {/* Left Column - Content */}
           <div className="w-full">
             <div className="mb-6">
-              <span className="inline-block bg-secondary-400 text-primary-800 px-3 py-2 rounded-full text-xs sm:text-sm font-medium mb-4">
+              <span className="inline-block bg-secondary-200 text-primary-800 px-3 py-2 rounded-full text-xs sm:text-sm font-medium mb-4">
                 About Us
               </span>
-              <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-secondary-900 mb-6">
+              <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-neutral-900 mb-6">
                 We Are Focused on Clients Satisfaction
               </h2>
             </div>
             
-            <p className="text-base sm:text-lg text-secondary-600 mb-8 leading-relaxed">
+            <p className="text-base sm:text-lg text-neutral-700 mb-8 leading-relaxed">
               A healthy and satisfactory relationship with clients is always our priority 
               that is the reason we give out our best so as to ensure maximum quality. 
               We aren't robots but our work can be as flawless as a robotic outcome.
@@ -63,8 +63,8 @@ const About = () => {
                     {feature.icon}
                   </div>
                   <div className="min-w-0">
-                    <h3 className="font-semibold text-secondary-900 mb-1 text-sm sm:text-base">{feature.title}</h3>
-                    <p className="text-xs sm:text-sm text-secondary-600">{feature.description}</p>
+                    <h3 className="font-semibold text-neutral-900 mb-1 text-sm sm:text-base">{feature.title}</h3>
+                    <p className="text-xs sm:text-sm text-neutral-600">{feature.description}</p>
                   </div>
                 </div>
               ))}
@@ -73,14 +73,14 @@ const About = () => {
 
           {/* Right Column - Stats */}
           <ShineCard>
-          <div className="bg-secondary-400 p-6 sm:p-8 rounded-2xl w-full">
+          <div className="bg-secondary-100 p-6 sm:p-8 rounded-2xl w-full">
             <div className="grid grid-cols-2 gap-6 sm:gap-8">
               {stats.map((stat, index) => (
                 <div key={index} className="text-center">
-                  <div className="text-2xl sm:text-3xl lg:text-4xl font-bold text-secondary-600 mb-2">
+                  <div className="text-2xl sm:text-3xl lg:text-4xl font-bold text-primary-600 mb-2">
                     {stat.number}
                   </div>
-                  <div className="text-secondary-800 font-medium text-sm sm:text-base">
+                  <div className="text-neutral-700 font-medium text-sm sm:text-base">
                     {stat.label}
                   </div>
                 </div>
@@ -100,8 +100,8 @@ const About = () => {
               />
               <div className="absolute inset-0 bg-black/50" />
               <div className="relative p-4 sm:p-6">
-                <h3 className="font-semibold text-secondary-50 mb-3 md:text-2xl text-sm sm:text-base">Our Mission</h3>
-                <p className="text-secondary-100 w-[90%] text-xs sm:text-sm">
+                <h3 className="font-semibold text-white mb-3 md:text-2xl text-sm sm:text-base">Our Mission</h3>
+                <p className="text-white/90 w-[90%] text-xs sm:text-sm">
                   To provide innovative technology solutions that empower businesses 
                   and individuals to achieve their digital transformation goals.
                 </p>

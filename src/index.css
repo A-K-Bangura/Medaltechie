@@ -5,31 +5,47 @@
    ======================================== */
 
 :root {
-  /* Color Palette */
-  --color-primary-50: #fde7e7;
-  --color-primary-100: #fbcfcf;
-  --color-primary-200: #f79f9f;
-  --color-primary-300: #f58888;
-  --color-primary-400: #f15858;
-  --color-primary-500: #ed2828;
+  /* Color Palette - 60-30-10 Principle */
+  /* Primary Color (#eb1010) - 10% - Accents, CTAs, Highlights */
+  --color-primary-50: #fef2f2;
+  --color-primary-100: #fee2e2;
+  --color-primary-200: #fecaca;
+  --color-primary-300: #fca5a5;
+  --color-primary-400: #f87171;
+  --color-primary-500: #ef4444;
   --color-primary-600: #eb1010;
-  --color-primary-700: #d40e0e;
-  --color-primary-800: #bc0d0d;
-  --color-primary-900: #760808;
-  --color-primary-950: #2f0303;
+  --color-primary-700: #dc2626;
+  --color-primary-800: #b91c1c;
+  --color-primary-900: #991b1b;
+  --color-primary-950: #7f1d1d;
 
-  --color-secondary-50: #f8fafc;
-  --color-secondary-100: #f1f5f9;
-  --color-secondary-200: #ffefe9;
-  --color-secondary-300: #ffdfd3;
-  --color-secondary-400: #ffbea7;
-  --color-secondary-500: #ff8e64;
-  --color-secondary-600: #190903;
-  --color-secondary-700: #e6541f;
-  --color-secondary-800: #66250e;
-  --color-secondary-900: #331307;
-  --color-secondary-950: #190903;
+  /* Secondary Color (#f4f7fe) - 60% - Backgrounds, Main Content */
+  --color-secondary-50: #f4f7fe;
+  --color-secondary-100: #e8f0fe;
+  --color-secondary-200: #d1e2fd;
+  --color-secondary-300: #b3cffc;
+  --color-secondary-400: #8bb8fa;
+  --color-secondary-500: #5a9af7;
+  --color-secondary-600: #3b82f6;
+  --color-secondary-700: #2563eb;
+  --color-secondary-800: #1d4ed8;
+  --color-secondary-900: #1e40af;
+  --color-secondary-950: #1e3a8a;
 
+  /* Neutral Colors - 30% - Text, Borders, Supporting Elements */
+  --color-neutral-50: #f8fafc;
+  --color-neutral-100: #f1f5f9;
+  --color-neutral-200: #e2e8f0;
+  --color-neutral-300: #cbd5e1;
+  --color-neutral-400: #94a3b8;
+  --color-neutral-500: #64748b;
+  --color-neutral-600: #475569;
+  --color-neutral-700: #334155;
+  --color-neutral-800: #1e293b;
+  --color-neutral-900: #0f172a;
+  --color-neutral-950: #020617;
+
+  /* Accent Colors - Complementary to primary */
   --color-accent-50: #f0f9ff;
   --color-accent-100: #e0f2fe;
   --color-accent-200: #bae6fd;
@@ -42,6 +58,7 @@
   --color-accent-900: #0c4a6e;
   --color-accent-950: #082f49;
 
+  /* Success Colors - Green */
   --color-success-50: #f0fdf4;
   --color-success-100: #dcfce7;
   --color-success-200: #bbf7d0;
@@ -54,6 +71,7 @@
   --color-success-900: #14532d;
   --color-success-950: #052e16;
 
+  /* Warning Colors - Amber */
   --color-warning-50: #fffbeb;
   --color-warning-100: #fef3c7;
   --color-warning-200: #fde68a;
@@ -66,19 +84,20 @@
   --color-warning-900: #78350f;
   --color-warning-950: #451a03;
 
+  /* Error Colors - Red (using primary red) */
   --color-error-50: #fef2f2;
   --color-error-100: #fee2e2;
   --color-error-200: #fecaca;
   --color-error-300: #fca5a5;
   --color-error-400: #f87171;
   --color-error-500: #ef4444;
-  --color-error-600: #dc2626;
-  --color-error-700: #b91c1c;
-  --color-error-800: #991b1b;
-  --color-error-900: #7f1d1d;
-  --color-error-950: #450a0a;
+  --color-error-600: #eb1010;
+  --color-error-700: #dc2626;
+  --color-error-800: #b91c1c;
+  --color-error-900: #991b1b;
+  --color-error-950: #7f1d1d;
 
-  /* Neutral Colors */
+  /* Base Colors */
   --color-white: #ffffff;
   --color-black: #000000;
   --color-transparent: transparent;
@@ -218,6 +237,18 @@
   --color-secondary-800: var(--color-secondary-800);
   --color-secondary-900: var(--color-secondary-900);
   --color-secondary-950: var(--color-secondary-950);
+
+  --color-neutral-50: var(--color-neutral-50);
+  --color-neutral-100: var(--color-neutral-100);
+  --color-neutral-200: var(--color-neutral-200);
+  --color-neutral-300: var(--color-neutral-300);
+  --color-neutral-400: var(--color-neutral-400);
+  --color-neutral-500: var(--color-neutral-500);
+  --color-neutral-600: var(--color-neutral-600);
+  --color-neutral-700: var(--color-neutral-700);
+  --color-neutral-800: var(--color-neutral-800);
+  --color-neutral-900: var(--color-neutral-900);
+  --color-neutral-950: var(--color-neutral-950);
 
   --color-accent-50: var(--color-accent-50);
   --color-accent-100: var(--color-accent-100);
@@ -367,25 +398,56 @@
    UTILITY CLASSES USING CSS VARIABLES
    ======================================== */
 
-/* Color Utilities */
+/* Color Utilities - Updated for 60-30-10 Principle */
+/* Primary Colors (10%) - Accents, CTAs, Highlights */
 .text-primary { color: var(--color-primary-600); }
 .text-primary-light { color: var(--color-primary-400); }
 .text-primary-dark { color: var(--color-primary-800); }
-.text-secondary { color: var(--color-secondary-600); }
-.text-accent { color: var(--color-accent-600); }
-.text-success { color: var(--color-success-600); }
-.text-warning { color: var(--color-warning-600); }
-.text-error { color: var(--color-error-600); }
 
 .bg-primary { background-color: var(--color-primary-600); }
 .bg-primary-light { background-color: var(--color-primary-100); }
 .bg-primary-dark { background-color: var(--color-primary-800); }
-.bg-secondary { background-color: var(--color-secondary-100); }
-.bg-accent { background-color: var(--color-accent-100); }
 
 .border-primary { border-color: var(--color-primary-600); }
 .border-primary-light { border-color: var(--color-primary-200); }
+
+/* Secondary Colors (60%) - Backgrounds, Main Content */
+.text-secondary { color: var(--color-secondary-700); }
+.text-secondary-light { color: var(--color-secondary-500); }
+.text-secondary-dark { color: var(--color-secondary-900); }
+
+.bg-secondary { background-color: var(--color-secondary-50); }
+.bg-secondary-light { background-color: var(--color-secondary-100); }
+.bg-secondary-dark { background-color: var(--color-secondary-200); }
+
 .border-secondary { border-color: var(--color-secondary-200); }
+.border-secondary-light { border-color: var(--color-secondary-300); }
+
+/* Neutral Colors (30%) - Text, Borders, Supporting Elements */
+.text-neutral { color: var(--color-neutral-700); }
+.text-neutral-light { color: var(--color-neutral-500); }
+.text-neutral-dark { color: var(--color-neutral-900); }
+
+.bg-neutral { background-color: var(--color-neutral-50); }
+.bg-neutral-light { background-color: var(--color-neutral-100); }
+.bg-neutral-dark { background-color: var(--color-neutral-200); }
+
+.border-neutral { border-color: var(--color-neutral-300); }
+.border-neutral-light { border-color: var(--color-neutral-200); }
+
+/* Accent Colors */
+.text-accent { color: var(--color-accent-600); }
+.bg-accent { background-color: var(--color-accent-100); }
+.border-accent { border-color: var(--color-accent-300); }
+
+/* Status Colors */
+.text-success { color: var(--color-success-600); }
+.text-warning { color: var(--color-warning-600); }
+.text-error { color: var(--color-error-600); }
+
+.bg-success { background-color: var(--color-success-100); }
+.bg-warning { background-color: var(--color-warning-100); }
+.bg-error { background-color: var(--color-error-100); }
 
 /* Typography Utilities */
 .font-sans { font-family: var(--font-family-sans); }
@@ -500,7 +562,7 @@ a[href^="#"] {
 }
 
 ::-webkit-scrollbar-track {
-  background: var(--color-secondary-100);
+  background: var(--color-neutral-100);
 }
 
 ::-webkit-scrollbar-thumb {
@@ -728,12 +790,12 @@ height: 156px;
     justify-content: center;
     align-items: center;
     text-align: center;
-    color: var(--color-secondary-900);
+    color: var(--color-neutral-800);
     transition: .4s ease-in-out;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
     text-align: center;
-    background-color: var(--color-secondary-400);
+    background-color: var(--color-secondary-200);
     height: 60px;
     padding-bottom: 30px;
     /* width: 110%; */
@@ -745,12 +807,12 @@ height: 156px;
     justify-content: center;
     align-items: center;
     text-align: center;
-    color: var(--color-secondary-900);
+    color: var(--color-neutral-800);
     transition: .4s ease-in-out;
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
     text-align: center;
-    background-color: var(--color-secondary-400);
+    background-color: var(--color-secondary-200);
 
     height: 30px;
     padding-top: 7px;

@@ -9,10 +9,10 @@ const Portfolio = () => {
     <section id="portfolio" className="py-20 bg-white">
       <div className="container mx-auto px-4 text-center lg:text-left">
         <div className="mb-6">
-          <span className="inline-block bg-secondary-400 text-primary-800 px-3 py-2 rounded-full text-xs sm:text-sm font-medium mb-4">
+          <span className="inline-block bg-secondary-200 text-primary-800 px-3 py-2 rounded-full text-xs sm:text-sm font-medium mb-4">
             Portfolio
           </span>
-          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-secondary-900 mb-6">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-neutral-900 mb-6">
             Showcasing our expertise through <br /> successful projects
           </h2>
         </div>
@@ -49,14 +49,14 @@ const Portfolio = () => {
           <button
             aria-label="Previous"
             onClick={prev}
-            className="absolute left-2 top-1/2 -translate-y-1/2 bg-white/80 hover:bg-white text-secondary-900 rounded-full p-2 shadow"
+            className="absolute left-2 top-1/2 -translate-y-1/2 bg-white/80 hover:bg-white text-neutral-900 rounded-full p-2 shadow"
           >
             <ChevronLeft className="w-5 h-5" />
           </button>
           <button
             aria-label="Next"
             onClick={next}
-            className="absolute right-2 top-1/2 -translate-y-1/2 bg-white/80 hover:bg-white text-secondary-900 rounded-full p-2 shadow"
+            className="absolute right-2 top-1/2 -translate-y-1/2 bg-white/80 hover:bg-white text-neutral-900 rounded-full p-2 shadow"
           >
             <ChevronRight className="w-5 h-5" />
           </button>
@@ -68,18 +68,18 @@ const Portfolio = () => {
                 key={idx}
                 onClick={() => setCurrentIndex(idx)}
                 aria-label={`Go to slide ${idx + 1}`}
-                className={`h-2 w-2 rounded-full ${idx === currentIndex ? "bg-primary-600" : "bg-secondary-300"}`}
+                className={`h-2 w-2 rounded-full ${idx === currentIndex ? "bg-primary-600" : "bg-neutral-300"}`}
               />)
             )}
           </div>
         </div>
         {/* CTA Section */}
         <div className="text-center mt-12 sm:mt-16">
-          <div className="bg-secondary-400 text-white p-6 sm:p-8 rounded-2xl mx-4">
-            <h3 className="text-xl sm:text-2xl font-bold mb-4 text-secondary-600">
+          <div className="bg-primary-600 text-white p-6 sm:p-8 rounded-2xl mx-4">
+            <h3 className="text-xl sm:text-2xl font-bold mb-4 text-white">
               Ready to Get Started?
             </h3>
-            <p className="text-secondary-800 mb-6 max-w-2xl mx-auto text-sm sm:text-base">
+            <p className="text-white/90 mb-6 max-w-2xl mx-auto text-sm sm:text-base">
               Let's discuss your project requirements and create something amazing together.
             </p>
             {/* <button className="bg-white text-primary-600 hover:bg-secondary-100 px-6 sm:px-8 py-2 sm:py-3 rounded-lg font-semibold transition-colors duration-base text-sm sm:text-base">

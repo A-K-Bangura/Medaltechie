@@ -67,10 +67,10 @@ const Services = () => {
         {/* Section Header */}
         <div className="text-center md:text-right mb-12 sm:mb-16">
           <div className="mb-6">
-            <span className="inline-block bg-secondary-400 text-primary-800 px-3 py-2 rounded-full text-xs sm:text-sm font-medium mb-4">
+            <span className="inline-block bg-secondary-200 text-primary-800 px-3 py-2 rounded-full text-xs sm:text-sm font-medium mb-4">
               Services
             </span>
-            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-secondary-900 mb-6">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-neutral-900 mb-6">
             What we do defines <br/> and projects our level of speciality
             </h2>
           </div>

@@ -108,19 +108,19 @@ const Testimonials = () => {
       <div className="container mx-auto px-4 w-full max-w-full">
         <div ref={containerRef} className="text-center">
           <div className="mb-6">
-            <span className="inline-block bg-secondary-400 text-primary-800 px-3 py-2 rounded-full text-xs sm:text-sm font-medium mb-4">
+            <span className="inline-block bg-secondary-200 text-primary-800 px-3 py-2 rounded-full text-xs sm:text-sm font-medium mb-4">
               Testimonials
             </span>
-            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-secondary-900 mb-6">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-neutral-900 mb-6">
               Words From Our Clients
             </h2>
           </div>
 
           <div className="w-full md:max-w-3xl lg:max-w-4xl mx-auto mb-2">
-            <div className="testimonial-card bg-white rounded-2xl px-4 md:px-8 py-6 shadow-lg border border-secondary-200">
+            <div className="testimonial-card bg-white rounded-2xl px-4 md:px-8 py-6 shadow-lg border border-neutral-200">
               <div className="mb-3">
                 <svg
-                  className="w-8 h-8 md:w-12 md:h-12 text-secondary-400 mx-auto"
+                  className="w-8 h-8 md:w-12 md:h-12 text-primary-400 mx-auto"
                   fill="currentColor"
                   viewBox="0 0 24 24"
                 >
@@ -128,7 +128,7 @@ const Testimonials = () => {
                 </svg>
               </div>
 
-              <blockquote className="text-base md:text-lg text-secondary-800 leading-relaxed mb-6">
+              <blockquote className="text-base md:text-lg text-neutral-700 leading-relaxed mb-6">
                 {currentTestimonial.quote}
               </blockquote>
 
@@ -136,13 +136,13 @@ const Testimonials = () => {
                 <img
                   src={currentTestimonial.avatar || "/placeholder.svg"}
                   alt={currentTestimonial.name}
-                  className="w-12 h-12 rounded-full object-cover border-2 border-secondary-200"
+                  className="w-12 h-12 rounded-full object-cover border-2 border-neutral-200"
                 />
                 <div className="text-left">
-                  <div className="font-semibold text-secondary-900 text-lg">
+                  <div className="font-semibold text-neutral-900 text-lg">
                     {currentTestimonial.name}
                   </div>
-                  <div className="text-secondary-600">
+                  <div className="text-neutral-600">
                     {currentTestimonial.position}, {currentTestimonial.company}
                   </div>
                 </div>
@@ -165,7 +165,7 @@ const Testimonials = () => {
                 <img
                   src={testimonial.avatar || "/placeholder.svg"}
                   alt={testimonial.name}
-                  className="w-12 h-12 md:w-14 md:h-14 rounded-full object-cover border-2 border-secondary-200"
+                  className="w-12 h-12 md:w-14 md:h-14 rounded-full object-cover border-2 border-neutral-200"
                 />
               </button>
             ))}
@@ -179,7 +179,7 @@ const Testimonials = () => {
                 className={`h-2 w-2 rounded-full transition-all duration-300 ${
                   index === activeIndex
                     ? "bg-primary-600"
-                    : "bg-secondary-300"
+                    : "bg-neutral-300"
                 }`}
                 aria-label={`Go to testimonial ${index + 1}`}
               />

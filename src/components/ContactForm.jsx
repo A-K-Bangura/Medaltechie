@@ -63,7 +63,7 @@ const ContactForm = () => {
         <div className="lg:col-start-1 lg:row-start-1">
           <label
             htmlFor="name"
-            className="block text-sm font-medium text-secondary-800 mb-2"
+            className="block text-sm font-medium text-neutral-800 mb-2"
           >
             Name
           </label>
@@ -74,8 +74,8 @@ const ContactForm = () => {
             value={formValues.name}
             onChange={handleChange}
             className={`w-full px-4 py-3 rounded-lg border ${
-              errors.name ? "border-error-500" : "border-secondary-300"
-            } focus:outline-none focus:ring-2 focus:ring-primary-400 bg-white text-secondary-900`}
+              errors.name ? "border-error-500" : "border-neutral-300"
+            } focus:outline-none focus:ring-2 focus:ring-primary-400 bg-white text-neutral-900`}
             placeholder="Your full name"
             aria-invalid={!!errors.name}
             aria-describedby={errors.name ? "name-error" : undefined}
@@ -90,7 +90,7 @@ const ContactForm = () => {
         <div className="lg:col-start-1 lg:row-start-2">
           <label
             htmlFor="email"
-            className="block text-sm font-medium text-secondary-800 mb-2"
+            className="block text-sm font-medium text-neutral-800 mb-2"
           >
             Email
           </label>
@@ -101,8 +101,8 @@ const ContactForm = () => {
             value={formValues.email}
             onChange={handleChange}
             className={`w-full px-4 py-3 rounded-lg border ${
-              errors.email ? "border-error-500" : "border-secondary-300"
-            } focus:outline-none focus:ring-2 focus:ring-primary-400 bg-white text-secondary-900`}
+              errors.email ? "border-error-500" : "border-neutral-300"
+            } focus:outline-none focus:ring-2 focus:ring-primary-400 bg-white text-neutral-900`}
             placeholder="you@example.com"
             aria-invalid={!!errors.email}
             aria-describedby={errors.email ? "email-error" : undefined}
@@ -118,7 +118,7 @@ const ContactForm = () => {
         <div className="lg:col-start-1 lg:row-start-3">
           <label
             htmlFor="phone"
-            className="block text-sm font-medium text-secondary-800 mb-2"
+            className="block text-sm font-medium text-neutral-800 mb-2"
           >
             Phone Number
           </label>
@@ -131,8 +131,8 @@ const ContactForm = () => {
             value={formValues.phone}
             onChange={handleChange}
             className={`w-full px-4 py-3 rounded-lg border ${
-              errors.phone ? "border-error-500" : "border-secondary-300"
-            } focus:outline-none focus:ring-2 focus:ring-primary-400 bg-white text-secondary-900`}
+              errors.phone ? "border-error-500" : "border-neutral-300"
+            } focus:outline-none focus:ring-2 focus:ring-primary-400 bg-white text-neutral-900`}
             placeholder="e.g. +1 (555) 123-4567"
             aria-invalid={!!errors.phone}
             aria-describedby={errors.phone ? "phone-error" : undefined}
@@ -147,7 +147,7 @@ const ContactForm = () => {
         <div className="flex flex-col h-full min-h-[10rem] lg:min-h-0 lg:col-start-2 lg:row-start-1 lg:row-span-2">
           <label
             htmlFor="message"
-            className="block text-sm font-medium text-secondary-800 mb-2"
+            className="block text-sm font-medium text-neutral-800 mb-2"
           >
             Message
           </label>
@@ -157,8 +157,8 @@ const ContactForm = () => {
             value={formValues.message}
             onChange={handleChange}
             className={`w-full px-4 py-3 rounded-lg border ${
-              errors.message ? "border-error-500" : "border-secondary-300"
-            } focus:outline-none focus:ring-2 focus:ring-primary-400 bg-white text-secondary-900 resize-y flex-1 lg:h-full lg:resize-none`}
+              errors.message ? "border-error-500" : "border-neutral-300"
+            } focus:outline-none focus:ring-2 focus:ring-primary-400 bg-white text-neutral-900 resize-y flex-1 lg:h-full lg:resize-none`}
             placeholder="Tell us about your project..."
             aria-invalid={!!errors.message}
             aria-describedby={errors.message ? "message-error" : undefined}
@@ -182,7 +182,7 @@ const ContactForm = () => {
             text={status.type === "loading" ? "Sending..." : "Send Message"}
             variant="primary"
             type="submit"
-            className="h-[50px] bg-secondary-400! text-secondary-900! py-[0px]! text-[0.9rem]!"
+            className="h-[50px] bg-primary-600! text-white! py-[0px]! text-[0.9rem]!"
             disabled={status.type === "loading"}
           />
         </div>
