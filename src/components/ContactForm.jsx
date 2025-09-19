@@ -63,7 +63,7 @@ const ContactForm = () => {
         <div className="lg:col-start-1 lg:row-start-1">
           <label
             htmlFor="name"
-            className="block text-sm font-medium text-neutral-800 mb-2"
+            className="block text-lg font-bold text-neutral-900 mb-2"
           >
             Name
           </label>
@@ -90,7 +90,7 @@ const ContactForm = () => {
         <div className="lg:col-start-1 lg:row-start-2">
           <label
             htmlFor="email"
-            className="block text-sm font-medium text-neutral-800 mb-2"
+            className="block text-lg font-bold text-neutral-900 mb-2"
           >
             Email
           </label>
@@ -118,7 +118,7 @@ const ContactForm = () => {
         <div className="lg:col-start-1 lg:row-start-3">
           <label
             htmlFor="phone"
-            className="block text-sm font-medium text-neutral-800 mb-2"
+            className="block text-lg font-bold text-neutral-900 mb-2"
           >
             Phone Number
           </label>
@@ -147,7 +147,7 @@ const ContactForm = () => {
         <div className="flex flex-col h-full min-h-[10rem] lg:min-h-0 lg:col-start-2 lg:row-start-1 lg:row-span-2">
           <label
             htmlFor="message"
-            className="block text-sm font-medium text-neutral-800 mb-2"
+            className="block text-lg font-bold text-neutral-900 mb-2"
           >
             Message
           </label>

@@ -11,6 +11,9 @@ import Team from './sections/Team'
 import Contact from './sections/Contact'
 import Blog from './sections/Blog'
 import Footer from './components/Footer'
+import gsap from 'gsap'
+import { ScrollTrigger } from 'gsap/ScrollTrigger'
+gsap.registerPlugin(ScrollTrigger)
 
 function App() {
   return (

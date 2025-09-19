@@ -98,9 +98,9 @@ const TeamMember = ({ name, skill, image, number}) => {
     <ShineCard className="border-none bg-transparent shadow-none">
       <div className={`cardm ${number % 2 === 0 ? "lg:mt-20" : ""}`}>
         <div className="card">
-          <div className="main rounded-xl">
+          <div className="main ">
             <img src={image}
-        alt={name} className="w-full h-full object-cover rounded-xl" />
+        alt={name} className="w-full h-full object-cover " />
         </div>
         </div>
         <div className="card2">

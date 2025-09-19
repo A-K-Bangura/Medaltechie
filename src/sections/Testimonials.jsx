@@ -3,52 +3,59 @@ import gsap from "gsap";
 import { useGSAPFadeIn } from "../hooks/use-gsap-fade-in";
 import { usePrefersReducedMotion } from "../hooks/use-prefers-reduced-motion";
 
+import profile1 from "../assets/images/testimonial_profiles/profile6.jpg"
+import profile2 from "../assets/images/testimonial_profiles/profile7.jpg"
+import profile3 from "../assets/images/testimonial_profiles/profile3.webp"
+import profile4 from "../assets/images/testimonial_profiles/profile4.jpg"
+import profile5 from "../assets/images/testimonial_profiles/profile5.jpg"
+import SectionTitle from '../components/SectionTitle'
+
 
 const testimonials = [
   {
     id: 1,
     quote:
-      "SAAS transformed our vision into reality with their sustainable approach. The eco-friendly materials and innovative design exceeded our expectations. Our new office building is not only beautiful but also energy-efficient.",
-    name: "Aminata Kamara",
-    position: "CEO",
-    company: "Green Tech Solutions",
-    avatar: "/professional-african-woman-ceo.jpg",
+      "I'm very happy with how the website turned out. It's Well Organized and Colored which shows off how BARAK CHOIR integrates each individual to be One. Also, how the functionalities are implemented is Awesome.",
+    name: "Francis Dargbeh",
+    position: "Founder",
+    company: "Barak Choir SL",
+    avatar: profile1,
   },
   {
     id: 2,
     quote:
-      "Working with SAAS was an incredible experience. They delivered our community center project on time and within budget, using locally sourced materials that support our economy while being environmentally responsible.",
-    name: "Mohamed Sesay",
-    position: "Director",
-    company: "Community Development Fund",
-    avatar: "/professional-african-man-director.jpg",
+      "Their Creativity level to implement the Website and allowing it to be Navigated easily is good. The Standard and User Interface merge to serve the fitting of Our Request is quite easy, friendly and interactive.",
+    name: "Cecilia A Bangura",
+    position: "Principal",
+    company: "Licsal Business College SL",
+    avatar: profile2,
   },
   {
     id: 3,
     quote:
-      "The team at SAAS understood our need for affordable housing without compromising on quality. Their innovative construction methods and sustainable practices made our housing project a huge success.",
-    name: "Fatima Bangura",
-    position: "Project Manager",
-    company: "Housing Development Authority",
-    avatar: "/professional-african-woman-project-manager.jpg",
+      "Their Services shouldn't be judegd by how old they are but how well they Perform. I'm Glad with their Services which are Reasonable & Affordable. They complete task within a shorter period than the stipulated time.",
+    name: "OLA OGUNFEYITIMI",
+    position: "CEO",
+    company: "Vitafoam SL",
+    avatar: profile3,
   },
   {
     id: 4,
     quote:
-      "SAAS brought expertise and creativity to our school construction project. The design is both functional and inspiring, creating an environment that enhances learning while being cost-effective to maintain.",
-    name: "Ibrahim Koroma",
-    position: "Principal",
-    company: "Sierra Leone Education Board",
-    avatar: "/professional-african-man-principal.jpg",
+      "I hired MedalTechie to build a mobile app for our e-learning program. From design mockups through user testing, they were professional, detail-oriented, and truly cared about usability. The result is an app our teachers and students love to use—simple, clean, and reliable. Their support after launch has also been excellent.",
+    name: "Fatmata Bangura",
+    position: "Director",
+    company: "Learners Connect Sierra Leone",
+    avatar: profile4,
   },
   {
     id: 5,
     quote:
-      "From concept to completion, SAAS demonstrated professionalism and innovation. Our healthcare facility is now a model for sustainable construction in the region, serving our community with pride.",
-    name: "Adama Turay",
-    position: "Administrator",
-    company: "Regional Health Authority",
-    avatar: "/professional-african-woman-administrator.jpg",
+      "MedalTechie delivered beyond expectations when we needed a database + custom software for managing our field operations. Security, data privacy, and clarity of reporting have all improved. The team was accessible, responded fast to change requests, and their pricing was reasonable.",
+    name: "Peter Conteh",
+    position: "Operations Head",
+    company: "GreenFields Agriculture",
+    avatar: profile5,
   },
 ];
 
@@ -108,9 +115,7 @@ const Testimonials = () => {
       <div className="container mx-auto px-4 w-full max-w-full">
         <div ref={containerRef} className="text-center">
           <div className="mb-6">
-            <span className="inline-block bg-secondary-200 text-primary-800 px-3 py-2 rounded-full text-xs sm:text-sm font-medium mb-4">
-              Testimonials
-            </span>
+            <SectionTitle title="Testimonials" />
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-neutral-900 mb-6">
               Words From Our Clients
             </h2>
@@ -136,7 +141,7 @@ const Testimonials = () => {
                 <img
                   src={currentTestimonial.avatar || "/placeholder.svg"}
                   alt={currentTestimonial.name}
-                  className="w-12 h-12 rounded-full object-cover border-2 border-neutral-200"
+                  className="w-20 h-20 rounded-full object-cover border-2 border-neutral-200"
                 />
                 <div className="text-left">
                   <div className="font-semibold text-neutral-900 text-lg">
@@ -165,7 +170,7 @@ const Testimonials = () => {
                 <img
                   src={testimonial.avatar || "/placeholder.svg"}
                   alt={testimonial.name}
-                  className="w-12 h-12 md:w-14 md:h-14 rounded-full object-cover border-2 border-neutral-200"
+                  className="w-12 h-12 md:w-16 md:h-16 rounded-full object-cover border-2 border-neutral-200"
                 />
               </button>
             ))}

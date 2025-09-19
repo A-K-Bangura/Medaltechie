@@ -10,12 +10,12 @@ const Header = () => {
     { name: 'About', href: '#about' },
     { name: 'Services', href: '#services' },
     { name: 'Portfolio', href: '#portfolio' },
-    { name: 'Why Us', href: '#why-us' },
+    // { name: 'Why Us', href: '#why-us' },
     { name: 'Testimonials', href: '#testimonials' },
     { name: 'Features', href: '#features' },
     { name: 'Team', href: '#team' },
-    { name: 'Blog', href: '#blog' },
-    { name: 'Contact', href: '#contact' }
+    { name: 'Contact', href: '#contact' },
+    { name: 'Blog', href: '#blog' }
   ]
 
   return (

@@ -667,6 +667,15 @@ img, video, iframe {
   animation: button-shine 2.5s;
 }
 
+/* .view_details {
+  cursor: pointer;
+}
+
+.view_details:hover {
+  scale: 1.05;
+  color: red!important;
+  transition: all 0.2s ease-in-out;
+}  */
 /* .hover-animate-button-shine:hover {
   animation: button-shine 2s linear forwards;
 } */

@@ -44,14 +44,21 @@ const Hero = () => {
 
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center px-4 mb-6 sm:mb-8">
-            {/* <button className="bg-primary-600 hover:bg-primary-700 text-white px-6 sm:px-8 py-3 sm:py-4 rounded-lg font-semibold text-base sm:text-lg transition-colors duration-base shadow-lg hover:shadow-xl w-full sm:w-auto">
-              Get Started
-            </button> */}
+            
             <ShineButton text="Get Started" variant="primary" />
-            {/* <button className="border-2 border-primary-600 text-primary-600 hover:bg-primary-600 hover:text-white px-6 sm:px-8 py-3 sm:py-4 rounded-lg font-semibold text-base sm:text-lg transition-all duration-base w-full sm:w-auto">
-              View Our Work
-            </button> */}
-            <ShineButton text="View Our Work" variant="secondary" />
+            
+            <ShineButton
+              text="View Our Work"
+              variant="secondary"
+              onClick={() => {
+                const section = document.getElementById('portfolio');
+                if (section) {
+                  section.scrollIntoView({ behavior: 'smooth' });
+                  // Update the URL hash without reloading the page
+                  window.history.pushState(null, '', '#portfolio');
+                }
+              }}
+            />
           </div>
 
           {/* Stats Preview */}
