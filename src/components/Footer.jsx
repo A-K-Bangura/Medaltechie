@@ -1,5 +1,4 @@
-import React from "react";
-import { Mail, Phone, MapPin } from "lucide-react";
+// import React from "react";
 import medalTechieLogo from "../assets/images/medallogo.png";
 
 const Footer = () => {
@@ -26,25 +25,31 @@ const Footer = () => {
             </p>
             <div className="flex space-x-4">
               <a
-                href="#"
+                href="https://www.facebook.com/medaltechie"
                 className="text-neutral-400 hover:text-white transition-colors"
               >
                 <span className="sr-only">Facebook</span>
-                <div className="w-5 h-5 sm:w-6 sm:h-6 bg-neutral-600 rounded-full"></div>
+                <div className="w-5 h-5 sm:w-6 sm:h-6 flex items-center justify-center bg-neutral-600 rounded-full">
+                  <i className="fa fa-facebook text-white flex-shrink-0"></i>
+                </div>
               </a>
               <a
-                href="#"
+                href="https://www.instagram.com/medaltechie/?hl=en"
                 className="text-neutral-400 hover:text-white transition-colors"
               >
-                <span className="sr-only">Twitter</span>
-                <div className="w-5 h-5 sm:w-6 sm:h-6 bg-neutral-600 rounded-full"></div>
+                <span className="sr-only">Instagram</span>
+                <div className="w-5 h-5 sm:w-6 sm:h-6 flex items-center justify-center bg-neutral-600 rounded-full">
+                  <i className="fa fa-instagram text-white flex-shrink-0"></i>
+                </div>
               </a>
               <a
-                href="#"
+                href="https://www.linkedin.com/company/medaltechie"
                 className="text-neutral-400 hover:text-white transition-colors"
               >
                 <span className="sr-only">LinkedIn</span>
-                <div className="w-5 h-5 sm:w-6 sm:h-6 bg-neutral-600 rounded-full"></div>
+                <div className="w-5 h-5 sm:w-6 sm:h-6 flex items-center justify-center bg-neutral-600 rounded-full">
+                  <i className="fa fa-linkedin text-white flex-shrink-0"></i>
+                </div>
               </a>
             </div>
           </div>
@@ -98,22 +103,22 @@ const Footer = () => {
         <div className="border-t border-neutral-700 mt-8 sm:mt-12 pt-6 sm:pt-8">
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
             <div className="flex items-center space-x-3">
-              <MapPin className="w-4 h-4 sm:w-5 sm:h-5 text-accent-400 flex-shrink-0" />
+              <i className="fa fa-map-marker text-accent-400 flex-shrink-0"></i>
               <span className="text-neutral-300 text-sm sm:text-base">
                 37 Upper Brook Street - Freetown, Sierra Leone
               </span>
             </div>
             <div className="flex items-center space-x-3">
-              <Mail className="w-4 h-4 sm:w-5 sm:h-5 text-accent-400 flex-shrink-0" />
+              <i className="fa fa-envelope text-accent-400 flex-shrink-0"></i>
               <a
-                href="mailto:medaltechie@gmail.com"
+                href="mailto:info@medaltechie.com"
                 className="text-neutral-300 hover:text-white transition-colors text-sm sm:text-base"
               >
-                medaltechie@gmail.com
+                info@medaltechie.com
               </a>
             </div>
             <div className="flex items-center space-x-3">
-              <Phone className="w-4 h-4 sm:w-5 sm:h-5 text-accent-400 flex-shrink-0" />
+              <i className="fa fa-phone text-accent-400 flex-shrink-0"></i>
               <a
                 href="tel:+23278672866"
                 className="text-neutral-300 hover:text-white transition-colors text-sm sm:text-base"

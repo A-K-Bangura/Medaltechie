@@ -5,7 +5,7 @@ import { usePrefersReducedMotion } from "../hooks/use-prefers-reduced-motion";
 
 import profile1 from "../assets/images/testimonial_profiles/profile6.jpeg";
 import profile2 from "../assets/images/testimonial_profiles/profile7.jpeg";
-import profile3 from "../assets/images/testimonial_profiles/profile3.webp";
+import profile3 from "../assets/images/testimonial_profiles/profile9.jpg";
 import profile4 from "../assets/images/testimonial_profiles/profile4.jpg";
 import profile5 from "../assets/images/testimonial_profiles/profile8.jpg";
 import SectionTitle from "../components/SectionTitle";

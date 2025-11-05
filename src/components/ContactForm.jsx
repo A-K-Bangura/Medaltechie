@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import { useState } from "react";
+// eslint-disable-next-line no-unused-vars
 import ShineButton from "./ShineButton";
 
 const initialFormState = {
@@ -42,12 +43,26 @@ const ContactForm = () => {
     if (!validate()) return;
     try {
       setStatus({ type: "loading", message: "" });
-      // Placeholder submission: replace with API/Email service as needed
-      await new Promise((resolve) => setTimeout(resolve, 800));
-      setStatus({
-        type: "success",
-        message: "Thanks! Your message has been sent.",
-      });
+
+      const to = "info@medaltechie.com";
+      const subject = `New contact from ${formValues.name}`;
+      const bodyLines = [
+        `Name: ${formValues.name}`,
+        `Email: ${formValues.email}`,
+        formValues.phone ? `Phone: ${formValues.phone}` : null,
+        "",
+        "Message:",
+        formValues.message,
+      ].filter(Boolean);
+      const body = bodyLines.join("%0D%0A");
+      const mailto = `mailto:${to}?subject=${encodeURIComponent(
+        subject
+      )}&body=${body}`;
+
+      // Trigger the user's email client
+      window.location.href = mailto;
+
+      setStatus({ type: "success", message: "Opening your email client..." });
       setFormValues(initialFormState);
     } catch (err) {
       setStatus({
@@ -133,7 +148,7 @@ const ContactForm = () => {
             className={`w-full px-4 py-3 rounded-lg border ${
               errors.phone ? "border-error-500" : "border-neutral-300"
             } focus:outline-none focus:ring-2 focus:ring-primary-400 bg-white text-neutral-900`}
-            placeholder="e.g. +1 (555) 123-4567"
+            placeholder="e.g. +232 76 123 456"
             aria-invalid={!!errors.phone}
             aria-describedby={errors.phone ? "phone-error" : undefined}
           />
