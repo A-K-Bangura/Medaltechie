@@ -3,13 +3,12 @@ import gsap from "gsap";
 import { useGSAPFadeIn } from "../hooks/use-gsap-fade-in";
 import { usePrefersReducedMotion } from "../hooks/use-prefers-reduced-motion";
 
-import profile1 from "../assets/images/testimonial_profiles/profile6.jpg"
-import profile2 from "../assets/images/testimonial_profiles/profile7.jpg"
-import profile3 from "../assets/images/testimonial_profiles/profile3.webp"
-import profile4 from "../assets/images/testimonial_profiles/profile4.jpg"
-import profile5 from "../assets/images/testimonial_profiles/profile5.jpg"
-import SectionTitle from '../components/SectionTitle'
-
+import profile1 from "../assets/images/testimonial_profiles/profile6.jpeg";
+import profile2 from "../assets/images/testimonial_profiles/profile7.jpeg";
+import profile3 from "../assets/images/testimonial_profiles/profile3.webp";
+import profile4 from "../assets/images/testimonial_profiles/profile4.jpg";
+import profile5 from "../assets/images/testimonial_profiles/profile8.jpg";
+import SectionTitle from "../components/SectionTitle";
 
 const testimonials = [
   {
@@ -98,7 +97,8 @@ const Testimonials = () => {
   useEffect(() => {
     if (prefersReducedMotion) return;
 
-    const testimonialCard = containerRef.current?.querySelector(".testimonial-card");
+    const testimonialCard =
+      containerRef.current?.querySelector(".testimonial-card");
     if (testimonialCard) {
       gsap.fromTo(
         testimonialCard,
@@ -111,7 +111,10 @@ const Testimonials = () => {
   const currentTestimonial = testimonials[activeIndex];
 
   return (
-    <section id="testimonials" className="py-16 sm:py-20 bg-secondary-50 w-full max-w-full overflow-hidden">
+    <section
+      id="testimonials"
+      className="py-16 sm:py-20 bg-secondary-50 w-full max-w-full overflow-hidden"
+    >
       <div className="container mx-auto px-4 w-full max-w-full">
         <div ref={containerRef} className="text-center">
           <div className="mb-6">
@@ -182,9 +185,7 @@ const Testimonials = () => {
                 key={index}
                 onClick={() => handleAvatarClick(index)}
                 className={`h-2 w-2 rounded-full transition-all duration-300 ${
-                  index === activeIndex
-                    ? "bg-primary-600"
-                    : "bg-neutral-300"
+                  index === activeIndex ? "bg-primary-600" : "bg-neutral-300"
                 }`}
                 aria-label={`Go to testimonial ${index + 1}`}
               />
@@ -197,4 +198,3 @@ const Testimonials = () => {
 };
 
 export default Testimonials;
-
